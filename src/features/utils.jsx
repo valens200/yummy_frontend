@@ -7,6 +7,7 @@ const initialState = {
     buttons: ['Orders', 'Filter'],
     Delivering: ['Delivered', 'Waiting', 'Rejected', 'All'],
     showModal:false,
+    showLinks:false,
     Resto:['Restaurent info', 'Restaurent Type & Timings', 'Create your menu'],
     showModalform: false,
     buttons3:[
@@ -317,10 +318,18 @@ const utilsSlice = createSlice({
                 state.buttons3[0].clicked = true;
             }
 
+        },
+        showLink: (state, action) =>{
+          if(action.payload == 'open'){
+            state.showLinks = true;
+          }else{
+            state.showLinks = false;
+          }
+            
         }
 
     }
 })
 
 export const utilReducer = utilsSlice.reducer;
-export const { checke , checke2, changeColor, showModa , hideModa , showModal, hideModal} = utilsSlice.actions;
+export const { checke , checke2, changeColor, showLink, showModa , hideModa , showModal, hideModal} = utilsSlice.actions;

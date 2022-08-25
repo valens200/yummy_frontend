@@ -15,16 +15,16 @@ export default function Tables() {
     
     const getClass = () => {
         if(showModal){
-            return "h-[85vh] ml-[20%] shadow-lg w-[70%]  absolute translate-y-[6%] flex flex-col space-y-3  border bg-white  z-40"
+            return "h-[86vh] overflow-y-scroll md:ml-[20%] ml-[3%] shadow-lg md:w-[70%]  w-[99%] absolute translate-y-[20%] md:translate-y-[6%] flex flex-col space-y-3  border bg-white  z-40"
         }else{
             return "h-[85vh] ml-[20%] w-[70%]  absolute translate-y-[6%]   z-40 invisible"
         }
     }
     const getClassi = (btn) => {
         if(btn.clicked){
-            return "bg-[red] text-white font-bold h-[5vh] ml-2 rounded w-[10%]"
+            return "bg-[red] text-white font-bold h-[5vh] ml-1 rounded  md:w-[10%]"
         }else{
-            return "border-[red] text-[red] ml-2 h-[5vh] rounded w-[10%] border-[2px]"
+            return "border-[red] text-[red] ml-1 h-[5vh] rounded   md:w-[10%] border-[2px]"
         }
     }
   return ReactDOM.createPortal(<div className={getClass()}>
@@ -35,17 +35,17 @@ export default function Tables() {
     <h1 className="font-bold">Menus</h1>
     <p className= "text-[#80808095] text-[0.80rem]">05 of 25 May 2022,09,41 pm</p> 
   </div>
-  <div className= "w-[96%] justify-between mx-auto">
+  <div className= "md:w-[96%]  w-[90%] justify-between mx-auto">
     {buttons2.map((btn, index) => (
         <button key={index}  onClick={() => dispatch(changeColor(btn))}  className={getClassi(btn)}>{btn.name}</button>
     ))}
   </div>
 
-  <div className= "flex flex-row ">
-    <div className= "flex flex-col overflow-y-scroll h-[65vh] w-[50%] space-y-6">
+  <div className= "flex flex-col space-y-4 md:flex-row md:space-y-0 ">
+    <div className= "flex flex-col  overflow-y-scroll h-[65vh] w-[90%] mx-auto md:w-[50%] space-y-6">
         {Tables.map((table, index) => (
-            <div key={index} className= "flex ml-8 justify-between bg-[#DFE6F5] rounded-l-full  w-[100%] ">
-            <div className= "w-[10%] rounded-full">
+            <div key={index} className= "flex h-[7vh] ml-8 justify-between bg-[#DFE6F5] rounded-l-full  w-[100%] ">
+            <div className= "w-[15%] rounded-full">
                 <img  className= "w-[100%] h-[100%] rounded-full" src={coffee}/>
             </div>
            <div className="w-[80%]">
@@ -57,7 +57,7 @@ export default function Tables() {
         </div>
         ))}
     </div>
-    <div className="w-[50%]">
+    <div className=" md:w-[50%]">
         <Newmenu />
     </div>
 

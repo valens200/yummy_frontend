@@ -37,18 +37,15 @@ const formSlice = createSlice({
             switch(data){
                 case 'FirstName':
                     state.FirstName = value;
-                    console.log(value);
                     break;
                  case 'LastName': 
                        state.LastName = value;
                        break;
                  case 'Email':
                     state.Email = value;
-                    console.log(state.Email)
                     break;
                  case 'password':
                     state.password = value;
-                    console.log(state.password)
                     break;
                  case 'phone':
                     state.Phone = value
@@ -80,11 +77,10 @@ const formSlice = createSlice({
             state.loggedIn.username = action.payload.username;
             state.loggedIn.email = action.payload.email;
             const user = state.loggedIn;
-            console.log(user);
         },
         setMessage: (state, action) => {
             state.message = action.payload
-            // console.log(action.payload)
+
         },
         ResetMessage: (state, action) => {
             state.message = "";
@@ -94,7 +90,6 @@ const formSlice = createSlice({
 
         next : (state, action) =>{
             state.signupInputs3 = state.signupInputs2;
-            console.log("hello")
         },
         back : (state, action) =>{
             state.signupInputs3 = state.signupInputs1;

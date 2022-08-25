@@ -6,6 +6,7 @@ import man from '../assets/images/man.png'
 import dancing from '../assets/images/dancing.png'
 import '../App.css'
 import running from '../assets/images/running.png'
+import  {Zoom , Slide}  from 'react-reveal'
 import { Link } from 'react-router-dom'
 
 const images = [man, coffee, man];
@@ -55,14 +56,14 @@ function Home() {
   return (
  <div>
        <div className="h-screen bg-[#E5E5E5]  w-[100%] pt-10">
-        <di v className="flex flex-row justify-between  w-[80%] mx-auto">
+        <div className="flex flex-row justify-between  w-[80%] mx-auto">
             <div>
                 <img className="w-[70%]" src={yummy} alt="logo image" />
             </div>
             <div>
                 <Jaques />
             </div>
-        </di>
+        </div>
         <div className="flex flex-col-reverse md:flex-row  h-[85vh] w-[90%] md:w-[70%] mx-auto">
             <div className="md:w-[60%] h-[100%] ">
               <div className="w-[] h-[50vh] mb-[40%] mt-[80%] md:mt-0 md:mb-0 translate-y-[17vh]">
@@ -73,13 +74,16 @@ function Home() {
                     <p>Boost your restaurant business for free</p>
                     <p>an receive much more revenue</p>
                 </div>
-                <div className= " w-[99%] md:w-[60%] mt-6  flex justify-between">
-            <Link className="btn bg-[#F54749] text-center pt-2 hover:bg-white  border-[#F54749] border-[1px] h-[6.5vh] hover:text-[#F54749] md:h-[6vh] w-[45%] rounded-full" to="/signup"><button >Register your resto</button></Link>
-            <Link  className="btn bg-white  hover:bg-[#F54749] text-center pt-2 hover:text-black text-[#F54749] border-[#F54749] border-[1px] h-[6.5vh] w-[45%] rounded-full"  to="/login"><button>Sign in your resto</button></Link>
-                </div>
+             <Slide left>
+                   <div className= " w-[99%] md:w-[60%] mt-6  flex justify-between">
+                        <Link className="btn bg-[#F54749] text-center pt-2 hover:bg-white  border-[#F54749] border-[1px] h-[6.5vh] hover:text-[#F54749] md:h-[6vh] w-[45%] rounded-full" to="/signup"><button >Register your resto</button></Link>
+                        <Link  className="btn bg-white  hover:bg-[#F54749] text-center pt-2 hover:text-black text-[#F54749] border-[#F54749] border-[1px] h-[6.5vh] w-[45%] rounded-full"  to="/login"><button>Sign in your resto</button></Link>
+                    </div>
+             </Slide>
               </div>
               <div>
-               <div className="flex ">
+             <Slide left>
+             <div className="flex ">
                <div className="flex flex-row  w-[30%] mt-20">
                     {images.map((img,index) => (
                         <img  className={getClass(index)} key={index}  src={img} alt="image"/>
@@ -91,10 +95,12 @@ function Home() {
                     <p><span className="font-bold">7,8 </span><span>(1.5k reviews)</span></p>
                 </div>
                </div>
+             </Slide>
               </div>
 
             </div>
-            <div className="md:w-[40%] mx-auto md:translate-y-0 translate-y-[65vh] h-[100%]">
+     <Zoom>
+     <div className="md:w-[40%] mx-auto md:translate-y-0 translate-y-[65vh] h-[100%]">
             <div className="md:w-[90%] w-[99%]  bg-[red] z-100 -translate-x-10 rounded-full mx-auto translate-y-[24%] md:translate-y-[40%]  h-[60%]">
             </div>
             <img className="z-40    mx-auto h-[60%] -translate-x-[10vh] md:h-[60vh] -translate-y-[40vh]  md:-translate-y-[46vh]" src={man} />
@@ -136,6 +142,7 @@ function Home() {
            </div>
                
             </div>
+     </Zoom>
             </div>
         </div>
           <div className="h-[100vh] md:pt-0 pt-[75%] bg-[#E5E5E5]">
@@ -146,13 +153,17 @@ function Home() {
             </div>
             <div className="flex bg-[#E5E5E5]  mt-[6%]  flex-col md:flex-row space-y-5 md:space-y-0 md:w-[80%] justify-between mx-auto">
              {cards.map((card, index) => (
-                   <div key={index} className="md:w-[30%] w-[90%] mx-auto shadow-lg rounded p-4 bg-white">
+              <Slide left>
+                     <div key={index} className="md:w-[30%] w-[90%] mx-auto shadow-lg rounded p-4 bg-white">
                    <img className="w-[100%] h-[30vh]" src={card.image}  alt="dancing child"/>
-                   <div>
+                 <Slide right>
+                 <div>
                        <p className="text-[#F54749] text-center">{card.title}</p>
                        <p className="mt-4 text-[0.80rem]">{card.description} </p>
                    </div>
+                 </Slide>
                </div>
+              </Slide>
              ))}
             </div>
             <div className="hi bg-[#E5E5E5] h-[70vh]">

@@ -1,6 +1,7 @@
 import React from 'react'
 import RedSidebar from '../components/RedSidebar'
 import Jaques from '../components/Jaques'
+import RedSidebarPortal from '../components/RedSidebarPortal'
 import  {useSelector , useDispatch} from 'react-redux'
 
 function Clients() {
@@ -10,6 +11,7 @@ function Clients() {
     <div className="flex h-screen flex-row">
         <div className="h-[100%] hidden md:block w-[15%]">
             <RedSidebar />
+            <RedSidebarPortal />
         </div>
        <div className="flex flex-col space-y-4 w-[100%]">
        <div className="flex justify-between  w-[80%] mt-10 mx-auto">

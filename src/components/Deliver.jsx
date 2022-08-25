@@ -13,11 +13,11 @@ function Delivering() {
     const getClass = (data) => {
         if(data){
             console.log(data)
-            return "bg-[red] translate-y-2 rounded w-[17%] rounded-full h-[2vh]";
+            return "bg-[red] translate-y-2 rounded w-[9%] md:w-[17%] rounded-full h-[2vh]";
            
     
         }else{
-            return "bg-[white] border-[red] border-[1px] translate-y-2 rounded w-[17%] rounded-full h-[2vh]"
+            return "bg-[white] border-[red] border-[1px] w-[9%] translate-y-2 rounded md:w-[17%] rounded-full h-[2vh]"
         }
       }
   return (

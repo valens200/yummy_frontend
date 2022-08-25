@@ -14,9 +14,6 @@ function SignUpForm() {
 
   var signupInputs1 = useSelector((store) => store.form.inputs.loginInputs);
   const opened = useSelector((store) => store.form.openedCheckBox);
-  useEffect(() =>{
-    console.log(signupInputs1)
-  }, [signupInputs1])
   const getType = (input) =>  {
     if(input == "Email"){
       return 'email';

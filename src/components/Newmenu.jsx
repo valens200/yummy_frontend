@@ -13,10 +13,7 @@ function Newmenu() {
     const dispatch = useDispatch()
     const getClass = (data) => {
         if(data){
-            console.log(data)
             return "bg-[red] translate-y-2 rounded w-[12%] rounded-full h-[2vh]";
-           
-    
         }else{
             return "bg-[white] border-[red] border-[1px] translate-y-2 rounded w-[12%] rounded-full h-[2vh]"
         }
