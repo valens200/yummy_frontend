@@ -145,46 +145,6 @@ function Home() {
      </Zoom>
             </div>
         </div>
-          <div className="h-[100vh] md:pt-0 pt-[75%] bg-[#E5E5E5]">
-            <div className="md:w-[50%] mx-auto text-center">
-                <p className="text-[#F54749] text-[1.4rem]">Why us</p>
-                <p className="font-bold text-[1.7rem]">Why Your Restaurant’s Best</p>
-                <p className="font-bold text-[1.7rem]">Maker Partner</p>
-            </div>
-            <div className="flex bg-[#E5E5E5]  mt-[6%]  flex-col md:flex-row space-y-5 md:space-y-0 md:w-[80%] justify-between mx-auto">
-             {cards.map((card, index) => (
-              <Slide left>
-                     <div key={index} className="md:w-[30%] w-[90%] mx-auto shadow-lg rounded p-4 bg-white">
-                   <img className="w-[100%] h-[30vh]" src={card.image}  alt="dancing child"/>
-                 <Slide right>
-                 <div>
-                       <p className="text-[#F54749] text-center">{card.title}</p>
-                       <p className="mt-4 text-[0.80rem]">{card.description} </p>
-                   </div>
-                 </Slide>
-               </div>
-              </Slide>
-             ))}
-            </div>
-            <div className="hi bg-[#E5E5E5] h-[70vh]">
-                <div className="w-[90%] h-[65%] flex flex-col md:flex-row  md:space-y-0 space-y-4 justify-between  translate-y-[43%] md:translate-y-[78%] mx-auto">
-                   {footerContents.map((content, index) => (
-                    <div key={index} className="">
-                        <p className="text-white font-bold md:h-[6vh]">{content.header}</p>
-                        <ul>
-                            {content.links.map((link, index) => (
-                                <li  className="mt-1 hover:underline"key={index}  >{link}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    
-                   ))}
-
-                </div>
-               
-            </div>
-
-          </div>
  </div>
   )
 }
